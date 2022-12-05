@@ -1,9 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import '../styles/App.css';
 
 const App = () => {
 
   let [count, setCount] = useState(0)
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
 
   return (
     <div class="ball">
